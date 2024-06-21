@@ -26,15 +26,14 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       ],
     },
     css: {
-      preprocessorOptions: {
-        // 全局引入了 scss 的文件
-        scss: {
-          // 添加你的全局共享scss文件
-          additionalData: ``,
-          javascriptEnabled: true,
-        },
-      },
-      postcss: {},
+      // preprocessorOptions: {
+      //   // 全局引入了 scss 的文件
+      //   scss: {
+      //     // 添加你的全局共享scss文件
+      //     additionalData: ``,
+      //     javascriptEnabled: true,
+      //   },
+      // },
     },
     plugins: createVitePlugins(viteEnv, isBuild),
   };

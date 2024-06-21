@@ -7,6 +7,13 @@ import {
   setupDirectives,
   setupAssets,
 } from "@/plugins";
+import { createHead } from '@vueuse/head'
+
+import 'animate.css';
+
+const head = createHead()
+
+import { setupModules } from '@/modules'
 import App from "./App.vue";
 async function bootStrap() {
   // 设置样式加载
@@ -23,6 +30,10 @@ async function bootStrap() {
   // 注册全局自定义指令
   setupDirectives(app);
 
+  setupModules(app);
+
+  app.use(head);
+
   // 挂载状态管理
   await setupStore(app);
 
@@ -32,3 +43,7 @@ async function bootStrap() {
   app.mount("#app");
 }
 bootStrap();
+
+
+
+

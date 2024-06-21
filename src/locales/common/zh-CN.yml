@@ -1,0 +1,15 @@
+meta:
+  title: CAMS-NIR 实验室 | 护理信息学研究
+  description: 中国医学科学院北京协和医学院护理信息学研究室。我们的主要研究工作是通过使用信息技术构建现实世界的应用程序，并在远程护理领域使用人工智能来提高患者的治疗效果。
+  welcome: 欢迎来到
+  welecomeDescLine1: 我们的主要研究工作致力于
+  welecomeDescLine2: 使用信息技术构建真实世界的应用程序
+  welecomeDescLine3: 以及远程护理领域的人工智能，以提高患者的治疗效果。
+
+navs:
+  home: 首页
+  members: 成员
+  researchArea: 研究领域
+  intellectualProperty: 知识产权
+  socialMedia: 社交平台
+  contactUs: 联系我们

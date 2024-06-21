@@ -1,0 +1,15 @@
+meta:
+  title: CAMS-NIR Lab | Nursing Informatics Research
+  description: Chinese Academy of Medical Science Peking Union Medical College Nursing Informatics Research Lab. We devotes our primary research efforts in building real world applications by using information technologies, and AI in the tele-nursing domain in enhancing patient outcomes.
+  welcome: Welcome to
+  welecomeDescLine1: We devote our primary research efforts to
+  welecomeDescLine2: building real-world applications using information technologies
+  welecomeDescLine3: and AI in the tele-nursing domain to enhance patient outcomes.
+
+navs:
+  home: Home
+  members: Members
+  researchArea: Research Area
+  intellectualProperty: Intellectual Property
+  socialMedia: Social Media
+  contactUs: Contact us

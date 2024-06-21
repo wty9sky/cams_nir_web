@@ -2,7 +2,7 @@ import type { Plugin } from "vite";
 import vue from "@vitejs/plugin-vue";
 import VueJsx from "@vitejs/plugin-vue-jsx";
 import legacy from "@vitejs/plugin-legacy";
-import html from "vite-plugin-html";
+import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
 import Icons from "unplugin-icons/vite";
@@ -15,6 +15,12 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
       reactivityTransform: true,
     }),
     VueJsx(),
+    VueI18n({
+      runtimeOnly: true,
+      compositionOnly: true,
+      fullInstall: true,
+      include: ['src/locales/**'],
+    }),
     legacy({
       targets: ["ie >= 11"],
       additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
@@ -37,10 +43,11 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
     AutoImport({
       // dts: path.resolve(pathSrc, 'typings', 'auto-imports.d.ts'),
       dts: "src/types/auto-imports.d.ts",
+      vueTemplate:true,
       // imports: ['vue', '@vueuse/core'],
       // Generate corresponding .eslintrc-auto-import.json file.
       // eslint globals Docs - https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals
-      imports: ["vue", "vue/macros", "vue-router", "pinia", "@vueuse/core"],
+      imports: ["vue", "vue/macros", "vue-router", "pinia", "@vueuse/core", "vue-i18n"],
       dirs: ["src/composables", "src/utils"],
       // Auto import for all module exports under directories
       // dirs: [
